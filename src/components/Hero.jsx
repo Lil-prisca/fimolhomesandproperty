@@ -4,6 +4,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
+const WHATSAPP_NUMBER = "2348144169686";
+// const WHATSAPP_NUMBER = "2348119692684";
+
+const whatsappMessage = encodeURIComponent(
+  `Hi, I'm interested in Investing in a  Property. Please provide more details.`,
+);
+
 const stats = [
   { value: "2,400+", label: "Properties Listed" },
   { value: "98%", label: "Client Satisfaction" },
@@ -113,9 +120,25 @@ export default function Hero() {
               </svg>
             </Link>
 
-            <a href="#categories" className="btn-outline">
+            {/* <a href="#categories" className="btn-outline">
               Explore Categories
-            </a>
+            </a> */}
+            <div
+              className="px-6 rounded-3xl py-3 text-[20px]"
+              style={{
+                background: "linear-gradient(135deg,#25D366,#128C7E)",
+                boxShadow: "0 0 20px rgba(37,211,102,0.25)",
+              }}
+            >
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" "
+              >
+                Book Inspection
+              </a>
+            </div>
           </motion.div>
 
           {/* Stats */}

@@ -9,12 +9,14 @@ import AdminPropertiesPage from "../Admin/pages/AdminProperties.jsx";
 import NewPropertyPage from "../Admin/pages/NewProperty.jsx";
 import EditPropertyPage from "../Admin/pages/EditProperty.jsx";
 import EnquiriesPage from "../Admin/pages/Enquires.jsx";
+import AboutPage from "../pages/AboutPage.jsx";
 
 const Approutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/allproperties" element={<Allproperties />} />
+      <Route path="/about-us" element={<AboutPage />} />
       <Route path="/properties/:id" element={<PropertyDetailPage />} />
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<AdminDashboard />} />

@@ -7,11 +7,18 @@ import useFetchProperties from "../hooks/useFetchProperties";
 
 const PropertyDetailPage = () => {
   const { id } = useParams();
-  const { properties } = useFetchProperties();
+  const { properties, loading } = useFetchProperties();
 
   const property = properties.find(
     (p) => p.slug === id || String(p.id) === String(id),
   );
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        Loading...
+      </div>
+    );
+  }
 
   if (!property) {
     return (

@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 import PropertyCard from "../components/PropertyCard";
 
 const WHATSAPP_NUMBER = "2348144169686";
+// const WHATSAPP_NUMBER = "2348119692684";
+
 const PHONE_NUMBER = "+2348144169686";
+// const PHONE_NUMBER = "+2348119692684";
 
 export default function PropertyDetail({ property, related }) {
   const [activeImage, setActiveImage] = useState(0);
@@ -20,8 +23,10 @@ export default function PropertyDetail({ property, related }) {
     message: `Hi, I'm interested in ${property.title}. Please get in touch with me.`,
   });
 
-  const images = property.images?.length
-    ? property.images
+  const images = property.property_images?.length
+    ? property.property_images
+        .sort((a, b) => a.display_order - b.display_order)
+        .map((img) => img.url)
     : ["https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=85"];
 
   function handleSubmit(e) {

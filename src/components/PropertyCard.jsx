@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function PropertyCard({ property, index }) {
+  // Add this inside the component before the return
+  const primaryImage =
+    property.property_images?.find((img) => img.is_primary)?.url ||
+    property.property_images?.[0]?.url ||
+    property.image || // fallback for local data
+    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80"; // final fallback
   // Get primary image or first image
 
   return (
@@ -19,7 +25,7 @@ function PropertyCard({ property, index }) {
       {/* Image */}
       <div className="relative h-56 overflow-hidden">
         <img
-          src={property.image}
+          src={primaryImage}
           alt={property.title}
           className=" w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

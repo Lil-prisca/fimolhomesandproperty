@@ -8,7 +8,9 @@ function useFetchProperties() {
 
   useEffect(() => {
     async function fetchProperties() {
-      const { data, error } = await supabase.from("properties").select("*");
+      const { data, error } = await supabase
+        .from("properties")
+        .select("*,property_images(*)");
 
       if (error) {
         console.error("Error fetching properties:", error.message);

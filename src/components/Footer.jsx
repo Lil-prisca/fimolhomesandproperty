@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-// import logo from "../Fimollogo.png";
+import logo from "../assets/Fimollogo.png";
 
 const footerLinks = {
   Properties: [
@@ -11,7 +11,7 @@ const footerLinks = {
     "Commercial",
     "Short Let",
   ],
-  Company: ["About Us", "Our Team", "Careers", "Press", "Blog", "Contact"],
+  Company: ["About Us", "Our Team", "Careers"],
   Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy", "GDPR"],
 };
 
@@ -27,7 +27,7 @@ const socials = [
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/fimolhomesandproperties",
     icon: (
       <svg
         className="w-5 h-5"
@@ -43,11 +43,21 @@ const socials = [
     ),
   },
   {
-    label: "LinkedIn",
-    href: "#",
+    label: "Tiktok",
+    href: "https://www.tiktok.com/@fimolhomesltd1?_r=1&_t=ZS-977sbFO5Wei",
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.54V6.79a4.85 4.85 0 01-1.02-.1z" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    ),
+  },
+  {
+    label: "FaceBook",
+    href: "https://www.facebook.com/share/1Uuwnx9xQk/?mibextid=wwXIfr",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
         <circle cx="4" cy="4" r="2" />
       </svg>
     ),
@@ -136,7 +146,7 @@ text-sm"
                     fill="currentColor"
                   />
                 </svg>
-                <span>14 Adeola Odeku Street, Victoria Island, Lagos</span>
+                <span>2,Oba Ogundipe Byepass Liberty Road Ibadan</span>
               </div>
               <div className="flex items-center gap-3">
                 <svg
@@ -151,7 +161,9 @@ text-sm"
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span>+234 800 123 4567</span>
+                <span>+2348119692684 </span>
+                <span>+2348142619300 </span>
+                <span>+2347045149357 </span>
               </div>
               <div className="flex items-center gap-3">
                 <svg
