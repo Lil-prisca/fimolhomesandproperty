@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Ad1 from "../assets/Ads1.jpeg";
+import Ad2 from "../assets/Ads2.jpeg";
 
 const ads = [
   {
@@ -13,8 +14,7 @@ const ads = [
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
+    image: Ad2,
     title: "Land for Sale",
     subtitle: "Affordable plots in prime locations across Nigeria.",
     cta: "View Listings",
@@ -22,8 +22,7 @@ const ads = [
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
+    image: Ads3,
     title: "Luxury Apartments",
     subtitle: "Experience premium living in Victoria Island.",
     cta: "Explore Now",
