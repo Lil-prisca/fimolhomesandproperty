@@ -2,22 +2,22 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const categories = [
-  {
-    label: "Apartments",
-    count: "340+ listings",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
-    desc: "Modern urban living in prime city locations",
-    link: "/allproperties?type=Apartment",
-  },
-  {
-    label: "Villas",
-    count: "120+ listings",
-    image:
-      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&q=80",
-    desc: "Expansive private estates with resort amenities",
-    link: "/allproperties?type=Villa",
-  },
+  // {
+  //   label: "Apartments",
+  //   count: "340+ listings",
+  //   image:
+  //     "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+  //   desc: "Modern urban living in prime city locations",
+  //   link: "/allproperties?type=Apartment",
+  // },
+  // {
+  //   label: "Villas",
+  //   count: "120+ listings",
+  //   image:
+  //     "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&q=80",
+  //   desc: "Expansive private estates with resort amenities",
+  //   link: "/allproperties?type=Villa",
+  // },
   {
     label: "Land",
     count: "580+ listings",
@@ -26,14 +26,14 @@ const categories = [
     desc: "Prime plots in residential and commercial zones",
     link: "/allproperties?type=Land",
   },
-  {
-    label: "Luxury Homes",
-    count: "95+ listings",
-    image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
-    desc: "Bespoke residences that redefine sophisticated living",
-    link: "/allproperties?type=Luxury+Home",
-  },
+  // {
+  //   label: "Luxury Homes",
+  //   count: "95+ listings",
+  //   image:
+  //     "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
+  //   desc: "Bespoke residences that redefine sophisticated living",
+  //   link: "/allproperties?type=Luxury+Home",
+  // },
   {
     label: "Commercial",
     count: "210+ listings",

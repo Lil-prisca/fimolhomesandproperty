@@ -7,13 +7,13 @@ import useFetchProperties from "../hooks/useFetchProperties";
 
 const PROPERTY_TYPES = [
   { label: "All", value: "all" },
-  { label: "Apartments", value: "Apartment" },
-  { label: "Villas", value: "Villa" },
+  // { label: "Apartments", value: "Apartment" },
+  // { label: "Villas", value: "Villa" },
   { label: "Land", value: "Land" },
-  { label: "Luxury Homes", value: "Luxury Home" },
+  // { label: "Luxury Homes", value: "Luxury Home" },
   { label: "Houses", value: "House" },
   { label: "Commercial", value: "Commercial" },
-  { label: "Luxury Apartments", value: "Luxury Apartment" },
+  // { label: "Luxury Apartments", value: "Luxury Apartment" },
 ];
 
 // const NIGERIA_STATES = [

@@ -7,8 +7,8 @@ const navLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about-us" },
   { label: "Our Products", to: "/allproperties" },
-  { label: "Testimonials", to: "/testimonials" },
-  { label: "Contact", to: "/contact" },
+  // { label: "Testimonials", to: "/testimonials" },
+  // { label: "Contact", to: "/contact" },
 ];
 
 export default function Navbar(props) {
@@ -41,7 +41,7 @@ export default function Navbar(props) {
 
           {/* Desktop nav */}
           {props.home ? (
-            <div className="hidden md:flex items-center lg:gap-8 md:gap-3 md">
+            <div className="hidden md:flex items-center lg:gap-8 md:gap-5 md">
               {navLinks.map((link, i) => (
                 <NavLink
                   key={link.label}
@@ -51,8 +51,8 @@ export default function Navbar(props) {
                   transition={{ delay: 0.1 * i + 0.4, duration: 0.4 }}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-sm text-black/70 hover:text-black transition-colors duration-200 relative group border-b-2 border-blue-400"
-                      : "text-sm text-black/70 hover:text-black transition-colors duration-200 relative group"
+                      ? "text-lg text-black/70 hover:text-black transition-colors duration-200 relative group border-b-2 border-blue-400"
+                      : "text-lg text-black/70 hover:text-black transition-colors duration-200 relative group"
                   }
                 >
                   {link.label}

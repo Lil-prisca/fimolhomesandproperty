@@ -72,7 +72,7 @@ export default function AdsCarousel() {
               className="w-full h-full object-cover"
             />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#020B18]/80 via-[#020B18]/40 to-transparent" />
+            {/* <div className="absolute inset-0 bg-gradient-to-r from-[#020B18]/80 via-[#020B18]/40 to-transparent" /> */}
 
             {/* Content */}
             <div className="absolute inset-0 flex items-center px-8 md:px-12">
