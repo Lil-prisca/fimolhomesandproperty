@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Ad1 from "../assets/Ads1.jpeg";
 import Ad2 from "../assets/Ads2.jpeg";
+import Ad3 from "../assets/Ads3.jpeg";
 
 const ads = [
   {
@@ -22,7 +23,7 @@ const ads = [
   },
   {
     id: 3,
-    image: Ads3,
+    image: Ad3,
     title: "Luxury Apartments",
     subtitle: "Experience premium living in Victoria Island.",
     cta: "Explore Now",
