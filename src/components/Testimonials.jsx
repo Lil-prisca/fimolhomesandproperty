@@ -40,7 +40,7 @@ const testimonials = [
   },
 ];
 
-function Stars() {
+function Stars({ count }) {
   return (
     <div className="flex gap-1">
       {Array.from({ length: count }).map((_, i) => (
@@ -63,7 +63,7 @@ export default function Testimonials() {
   useEffect(() => {
     const t = setInterval(
       () => setActive((prev) => (prev + 1) % testimonials.length),
-      5500,
+      7000,
     );
     return () => clearInterval(t);
   }, []);
@@ -107,7 +107,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-4xl lg:text-5xl font-bold text-white"
+            className="font-display text-4xl lg:text-5xl font-bold text-black"
           >
             What Our Clients Say
           </motion.h2>
@@ -115,7 +115,7 @@ export default function Testimonials() {
 
         <div className="grid lg:grid-cols-5 gap-8 items-center">
           {/* Avatar stack / selector */}
-          <div className="lg:col-span-2 flex flex-row lg:flex-col gap-4 overflow-x-auto pb-2 lg:pb-0">
+          {/* <div className="lg:col-span-2 flex flex-row lg:flex-col gap-4 overflow-x-auto pb-2 lg:pb-0">
             {testimonials.map((t, i) => (
               <motion.button
                 key={t.name}
@@ -128,7 +128,7 @@ export default function Testimonials() {
                 }`}
               >
                 <div className="relative w-12 h-12 flex-shrink-0">
-                  <Image
+                  <img
                     src={t.avatar}
                     alt={t.name}
                     fill
@@ -156,7 +156,7 @@ export default function Testimonials() {
                 )}
               </motion.button>
             ))}
-          </div>
+          </div> */}
 
           {/* Quote card */}
           <div className="lg:col-span-3">
@@ -181,15 +181,15 @@ export default function Testimonials() {
                 </blockquote>
 
                 <div className="flex items-center gap-4">
-                  <div className="relative w-14 h-14">
-                    <Image
+                  {/* <div className="relative w-14 h-14">
+                    <img
                       src={testimonials[active].avatar}
                       alt={testimonials[active].name}
                       fill
                       className="object-cover rounded-full ring-2 ring-blue-400"
                       sizes="56px"
                     />
-                  </div>
+                  </div> */}
                   <div>
                     <div className="font-semibold text-white text-base">
                       {testimonials[active].name}

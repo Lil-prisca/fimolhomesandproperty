@@ -6,6 +6,7 @@ import PropertyCategories from "../components/PropertyCategories";
 import CTASection from "../components/CTASection";
 import LandAcquisition from "../components/LandAcquisition";
 import AdsCarousel from "../components/AdsCarousel";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <PropertyCategories />
       <AdsCarousel />
       <LandAcquisition />
+      <Testimonials />
       <CTASection />
       <Footer />
     </>

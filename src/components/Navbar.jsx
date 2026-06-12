@@ -41,7 +41,7 @@ export default function Navbar(props) {
 
           {/* Desktop nav */}
           {props.home ? (
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center lg:gap-8 md:gap-3 md">
               {navLinks.map((link, i) => (
                 <NavLink
                   key={link.label}

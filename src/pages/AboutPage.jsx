@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -14,10 +15,13 @@ const whatsappMessage = encodeURIComponent(
 
 const team = [
   {
-    name: "Adeyinka Oluwadarasimi",
+    name: "Oluwafunmilayo Imoleayo",
     role: "Founder & CEO",
     image: ceo,
+    tiktok: "https://www.tiktok.com/@oluwafunmilayo.ti6?_r=1&_t=ZS-977uvaUqncS",
+    instagram: "https://www.instagram.com/funmilayoimoleayo",
     bio: "15+ years experience in Nigerian real estate. Passionate about connecting people with their dream properties.",
+    bios: "professional journey is marked by a spectrum of projects where he has showcased his proficiency as a GIS expert and facilitated countless individuals as a property acquisition consultant, amassing over 6 years of invaluable experience. Renowned for his adept leadership, analytical acumen, and problem-solving prowess, he has spearheaded initiatives across diverse environmental development domains, wielding his extensive knowledge to effect positive change. Recently",
   },
   {
     name: "Chioma Okafor",
@@ -113,6 +117,7 @@ const values = [
 ];
 
 export default function AboutPage() {
+  const [selectedMember, setSelectedMember] = useState(null);
   return (
     <>
       <Navbar home />
@@ -465,6 +470,7 @@ export default function AboutPage() {
               {team.map((member, i) => (
                 <motion.div
                   key={member.name}
+                  onClick={() => setSelectedMember(member)}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -552,6 +558,98 @@ export default function AboutPage() {
             </div>
           </motion.div>
         </section>
+        <AnimatePresence>
+          {selectedMember && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedMember(null)}
+              className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                onClick={(e) => e.stopPropagation()}
+                className="bg-white rounded-2xl max-w-md w-full overflow-hidden relative"
+              >
+                <button
+                  onClick={() => setSelectedMember(null)}
+                  className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center z-10"
+                >
+                  ✕
+                </button>
+
+                <div className="max-h-70 overflow-hidden">
+                  <img
+                    src={selectedMember.image}
+                    alt={selectedMember.name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+
+                <div className="p-6 overflow-y-auto max-h-75">
+                  <div className="mb-5 flex justify-between">
+                    <a
+                      href={selectedMember.tiktok}
+                      className="flex gap-2 text-blue-600"
+                    >
+                      <svg
+                        className="w-5 h-5"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.54V6.79a4.85 4.85 0 01-1.02-.1z" />
+                        <circle cx="4" cy="4" r="2" />
+                      </svg>
+                      <span>Tiktok</span>
+                    </a>
+                    <a
+                      href={selectedMember.instagram}
+                      className="flex gap-2  text-blue-600"
+                    >
+                      <svg
+                        className="w-5 h-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                      >
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        />
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                      </svg>
+                      <span>Instagram</span>
+                    </a>
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#020B18]">
+                    {selectedMember.name}
+                  </h3>
+
+                  <p className="text-blue-600 font-medium mb-4">
+                    {selectedMember.role}
+                  </p>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    {selectedMember.bio}
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    {selectedMember.bios}
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <Footer />
       </main>
     </>

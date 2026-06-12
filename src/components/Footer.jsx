@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-// import logo from "../assets/Fimollogo.png";
+import logo from "../assets/Fimollogo.png";
 
 const footerLinks = {
   Properties: [
@@ -115,17 +115,12 @@ text-sm"
           {/* Brand column */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path
-                    d="M9 2L2 7v9h5v-5h4v5h5V7L9 2z"
-                    fill="white"
-                    fillOpacity="0.9"
-                  />
-                </svg>
+              <div className="w-9 h-9 rounded-lg bg-white  flex items-center justify-center">
+                <img src={logo} alt="Logo" />
               </div>
               <span className="font-display text-xl font-bold text-white">
-                Fimol<span className="text-gradient">Home</span>
+                Fimol <span className="text-gradient">Home {""}</span>
+                And Properties
               </span>
             </Link>
             <p className="text-white/45 text-sm leading-relaxed mb-6 max-w-xs">
@@ -161,9 +156,19 @@ text-sm"
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span>+2348119692684 </span>
-                <span>+2348142619300 </span>
-                <span>+2347045149357 </span>
+                <div className="flex flex-col gap-1  lg:flex-row">
+                  {["+2348119692684", "+2348142619300", "+2347045149357"].map(
+                    (phone) => (
+                      <a
+                        key={phone}
+                        href={`tel:${phone}`}
+                        className="text-white/70 hover:text-white transition-colors text-sm"
+                      >
+                        {phone}
+                      </a>
+                    ),
+                  )}
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <svg
@@ -183,7 +188,7 @@ text-sm"
                     strokeLinecap="round"
                   />
                 </svg>
-                <span>hello@FimolHome&Properties.ng</span>
+                <span>fimolhomeandpProperties@gmail.com</span>
               </div>
             </div>
 
