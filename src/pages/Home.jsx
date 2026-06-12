@@ -5,6 +5,7 @@ import FeaturedProperties from "../components/FeaturedProperties";
 import PropertyCategories from "../components/PropertyCategories";
 import CTASection from "../components/CTASection";
 import LandAcquisition from "../components/LandAcquisition";
+import AdsCarousel from "../components/AdsCarousel";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero />
       <FeaturedProperties />
       <PropertyCategories />
+      <AdsCarousel />
       <LandAcquisition />
       <CTASection />
       <Footer />
