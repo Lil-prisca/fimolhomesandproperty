@@ -1,13 +1,17 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Ad1 from "../assets/Ads1.jpeg";
-import Ad2 from "../assets/Ads2.jpeg";
-import Ad3 from "../assets/Ads3.jpeg";
+// import Ad1 from "../assets/Ads1.jpeg";
+// import Ad2 from "../assets/Ads2.jpeg";
+// import Ad3 from "../assets/Ads3.jpeg";
+import Ad4 from "../assets/Ads4.jpeg";
+import Ad5 from "../assets/Ads5.jpeg";
+import Ad6 from "../assets/Ads6.jpeg";
+import Ad7 from "../assets/Ads7.jpeg";
 
 const ads = [
   {
     id: 1,
-    image: Ad1,
+    image: Ad4,
     title: "Prime Commercial Space",
     subtitle: "Own a shop in Ibadan. Secure steady rental income.",
     cta: "Learn More",
@@ -15,7 +19,7 @@ const ads = [
   },
   {
     id: 2,
-    image: Ad2,
+    image: Ad5,
     title: "Land for Sale",
     subtitle: "Affordable plots in prime locations across Nigeria.",
     cta: "View Listings",
@@ -23,11 +27,15 @@ const ads = [
   },
   {
     id: 3,
-    image: Ad3,
+    image: Ad6,
     title: "Luxury Apartments",
     subtitle: "Experience premium living in Victoria Island.",
     cta: "Explore Now",
     link: "/allproperties?type=Luxury+Apartment",
+  },
+  {
+    id: 1,
+    image: Ad7,
   },
 ];
 

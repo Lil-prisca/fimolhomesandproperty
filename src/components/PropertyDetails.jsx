@@ -32,14 +32,14 @@ export default function PropertyDetail({ property, related }) {
   function handleSubmit(e) {
     e.preventDefault();
     setSubmitting(true);
-    //   .insert({
-    //     property_id: property.id,
-    //     property_title: property.title,
-    //     name: formData.name,
-    //     email: formData.email,
-    //     phone: formData.phone,
-    //     message: formData.message,
-    //   });
+    // .insert({
+    //   property_id: property.id,
+    //   property_title: property.title,
+    //   name: formData.name,
+    //   email: formData.email,
+    //   phone: formData.phone,
+    //   message: formData.message,
+    // });
 
     setTimeout(() => {
       setSubmitting(false);

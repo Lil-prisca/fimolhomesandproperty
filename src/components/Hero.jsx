@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import vid from "../assets/Hero.mp4";
+import vid from "../assets/Herovid.webm";
 
 const WHATSAPP_NUMBER = "2348144169686";
 // const WHATSAPP_NUMBER = "2348119692684";
