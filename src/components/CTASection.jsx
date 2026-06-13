@@ -130,39 +130,6 @@ export default function CTASection() {
                   Book Inspection
                 </a>
               </motion.div>
-
-              {/* Urgency badge */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.65 }}
-                className="mt-8 flex items-center gap-3"
-              >
-                <div className="flex -space-x-2">
-                  {[
-                    "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=60",
-                    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60",
-                    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60",
-                  ].map((src, i) => (
-                    <div
-                      key={i}
-                      className="relative w-8 h-8 rounded-full border-2 border-[#041629] overflow-hidden"
-                    >
-                      <img
-                        src={src}
-                        alt=""
-                        className="h-full w-full object-cover"
-                        sizes="32px"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <p className="text-white/50 text-sm">
-                  <span className="text-white font-semibold">150+ clients</span>
-                  found their property this month
-                </p>
-              </motion.div>
             </div>
           </div>
         </motion.div>

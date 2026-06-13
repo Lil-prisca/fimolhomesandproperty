@@ -119,7 +119,7 @@ text-sm"
                 <img src={logo} alt="Logo" />
               </div>
               <span className="font-display text-xl font-bold text-white">
-                Fimol <span className="text-gradient">Home {""}</span>
+                Fimol <span className="text-gradient">Homes {""}</span>
                 And Properties
               </span>
             </Link>

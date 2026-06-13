@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import gettingland from "../assets/Mangettingland.jpeg";
 import ceo from "../assets/Ceopics.jpeg";
+import mediaguy from "../assets/Mediaguy.jpeg";
 
 const WHATSAPP_NUMBER = "2348144169686";
 // const PHONE_NUMBER = "+2348144169686";
@@ -20,15 +21,16 @@ const team = [
     image: ceo,
     tiktok: "https://www.tiktok.com/@oluwafunmilayo.ti6?_r=1&_t=ZS-977uvaUqncS",
     instagram: "https://www.instagram.com/funmilayoimoleayo",
-    bio: "15+ years experience in Nigerian real estate. Passionate about connecting people with their dream properties.",
-    bios: "professional journey is marked by a spectrum of projects where he has showcased his proficiency as a GIS expert and facilitated countless individuals as a property acquisition consultant, amassing over 6 years of invaluable experience. Renowned for his adept leadership, analytical acumen, and problem-solving prowess, he has spearheaded initiatives across diverse environmental development domains, wielding his extensive knowledge to effect positive change. Recently",
+    bio: " She Joined real estate in 2019 as a realtor, bringing sharp analytical acumen and a passion for property acquisition. Has worked with several leading real estate firms across Nigeria, rising through the ranks with consistent excellence.",
+    bios: "Sales Executive at Kingdom Realties (2019–2020), Head of Sales at Jehus Farm, Head of Operations at Toposysi Realtors (2023), Branch Manager at Riel Homes (2024), and Director at Maya Real Homes (2025). A GIS expert with over 6 years of invaluable experience, renowned for adept leadership and problem-solving across diverse environmental development domains.",
   },
   {
-    name: "Chioma Okafor",
-    role: "Head of Sales",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
-    bio: "Expert in luxury residential properties across Lagos and Abuja with a portfolio of over ₦10B in transactions.",
+    name: "Adedayo James",
+    role: "Head of Media",
+    image: mediaguy,
+    bio: "",
+    tiktok:
+      "https://www.tiktok.com/@officialthex3rovert?_r=1&_t=ZS-97AzDjhSTmH",
   },
   // {
   //   name: "Emeka Nwosu",
@@ -202,23 +204,22 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-black  leading-relaxed">
                 <p>
-                  Fimol Home & Properties was founded in 2009 with a simple but
-                  powerful belief — that every Nigerian deserves access to
-                  quality real estate, presented with transparency and
-                  professionalism.
+                  Fimol Home & Properties was founded with a simple but powerful
+                  belief — that every Nigerian deserves access to quality real
+                  estate, presented with transparency and professionalism.
                 </p>
                 <p>
-                  What began as a small Lagos-based consultancy has grown into
-                  one of Nigeria's most trusted property platforms, with
-                  listings spanning every state and a team of dedicated
-                  professionals who understand the nuances of each market.
+                  What began as a small consultancy is growimg into one of
+                  Nigeria's most trusted property platforms, with various
+                  listings and a team of dedicated professionals who understand
+                  the nuances of each market.
                 </p>
                 <p>
-                  Over 15 years, we have facilitated thousands of transactions —
-                  from first-time buyers finding their starter home in Enugu, to
-                  institutional investors acquiring prime commercial land in
-                  Abuja. Every deal, regardless of size, receives the same level
-                  of care and attention.
+                  Over the years, we have facilitated transactions — from
+                  first-time buyers finding their starter home, to institutional
+                  investors acquiring prime commercial land. Every deal,
+                  regardless of size, receives the same level of care and
+                  attention.
                 </p>
               </div>
             </motion.div>
@@ -238,14 +239,14 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#020B18]/60 to-transparent" />
               </div>
-              <div className="absolute -bottom-6 -left-6 glass rounded-2xl p-5 border border-white/10">
+              {/* <div className="absolute -bottom-6 -left-6 glass rounded-2xl p-5 border border-white/10">
                 <div className="font-display text-2xl font-bold text-white">
                   2009
                 </div>
                 <div className="text-white/50 text-xs mt-0.5">
                   Founded in Lagos
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </section>

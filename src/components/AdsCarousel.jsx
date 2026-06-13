@@ -12,6 +12,7 @@ const ads = [
   {
     id: 1,
     image: Ad4,
+    subtext: "Selling-Fast",
     title: "Prime Commercial Space",
     subtitle: "Own a shop in Ibadan. Secure steady rental income.",
     cta: "Learn More",
@@ -20,6 +21,7 @@ const ads = [
   {
     id: 2,
     image: Ad5,
+    subtext: "Selling-Fast",
     title: "Land for Sale",
     subtitle: "Affordable plots in prime locations across Nigeria.",
     cta: "View Listings",
@@ -28,6 +30,7 @@ const ads = [
   {
     id: 3,
     image: Ad6,
+    subtext: "Sold-Out",
     title: "Luxury Apartments",
     subtitle: "Experience premium living in Victoria Island.",
     cta: "Explore Now",
@@ -36,6 +39,7 @@ const ads = [
   {
     id: 1,
     image: Ad7,
+    subtext: "Selling-Fast",
   },
 ];
 
@@ -81,9 +85,19 @@ export default function AdsCarousel() {
             />
             {/* Overlay */}
             {/* <div className="absolute inset-0 bg-gradient-to-r from-[#020B18]/80 via-[#020B18]/40 to-transparent" /> */}
+            {/* selling */}
+
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className=" absolute top-5 left-5 px-3 text-white   rounded-2xl glass text-xl  leading-relaxed"
+            >
+              {ads[current].subtext}
+            </motion.p>
 
             {/* Content */}
-            <div className="absolute inset-0 flex items-center px-8 md:px-12">
+            <div className="absolute inset-0 flex  items-center px-8 md:px-12">
               <div className="max-w-md">
                 {/* <motion.h3
                   initial={{ opacity: 0, y: 10 }}
@@ -92,16 +106,16 @@ export default function AdsCarousel() {
                   className="font-display text-2xl md:text-3xl font-bold text-white mb-2 leading-tight"
                 >
                   {ads[current].title}
-                </motion.h3>
-                <motion.p
+                </motion.h3> */}
+                {/* <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                   className="text-white/60 text-sm mb-5 leading-relaxed"
                 >
                   {ads[current].subtitle}
-                </motion.p>
-                <motion.a
+                </motion.p> */}
+                {/* <motion.a
                   href={ads[current].link}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
