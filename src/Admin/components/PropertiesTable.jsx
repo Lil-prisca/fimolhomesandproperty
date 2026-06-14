@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { supabase } from "../../supabase";
 
 export default function PropertiesTable({ properties: initialProperties }) {
   const [properties, setProperties] = useState(initialProperties);
 
-  const [deletingId, setDeletingId] = useState(null);
+  // const [deletingId, setDeletingId] = useState(null);
   const [confirmDelete, setConfirmDelete] = useState(null);
+  const [isDeleting, setIsDeleting] = useState(false);
   const [search, setSearch] = useState("");
 
   const filtered = properties.filter(
@@ -20,10 +22,36 @@ export default function PropertiesTable({ properties: initialProperties }) {
   //   const newStatus = current === "active" ? "inactive" : "active";
   // }
 
-  async function toggleFeatured() {}
+  async function toggleFeatured(id, current) {
+    const { error } = await supabase
+      .from("properties")
+      .update({ featured: !current })
+      .eq("id", id);
+
+    if (error) {
+      console.error("Toggle featured error:", error.message);
+      return;
+    }
+
+    setProperties((prev) =>
+      prev.map((p) => (p.id === id ? { ...p, featured: !current } : p)),
+    );
+  }
 
   async function handleDelete(id) {
-    setDeletingId(id);
+    setIsDeleting(true);
+
+    const { error } = await supabase.from("properties").delete().eq("id", id);
+
+    if (error) {
+      console.error("Delete error:", error.message);
+      setIsDeleting(false);
+      return;
+    }
+
+    setProperties((prev) => prev.filter((p) => p.id !== id));
+    setIsDeleting(false);
+    setConfirmDelete(null);
   }
 
   return (
@@ -111,7 +139,7 @@ export default function PropertiesTable({ properties: initialProperties }) {
                           {p.price}
                         </span>
                       </td>
-                      <td className="px-4 py-4">
+                      {/* <td className="px-4 py-4">
                         <button
                           onClick={() => toggleStatus(p.id, p.status)}
                           className={`text-xs px-3 py-1 rounded-full font-medium transition-all ${
@@ -122,7 +150,7 @@ export default function PropertiesTable({ properties: initialProperties }) {
                         >
                           {p.status}
                         </button>
-                      </td>
+                      </td> */}
                       <td className="px-4 py-4 hidden sm:table-cell">
                         <button
                           onClick={() => toggleFeatured(p.id, p.featured)}
@@ -141,7 +169,7 @@ export default function PropertiesTable({ properties: initialProperties }) {
                       <td className="px-6 py-4">
                         <div className="flex items-center justify-end gap-3">
                           <Link
-                            href={`/properties/${p.slug}`}
+                            to={`/properties/${p.slug}`}
                             target="_blank"
                             className="text-white/30 hover:text-white/70 text-xs transition-colors"
                           >
@@ -229,10 +257,10 @@ export default function PropertiesTable({ properties: initialProperties }) {
                 </button>
                 <button
                   onClick={() => handleDelete(confirmDelete)}
-                  disabled={deletingId === confirmDelete}
+                  disabled={isDeleting}
                   className="flex-1 py-3 px-4 rounded-full text-sm font-semibold text-white bg-red-500 hover:bg-red-600 transition-colors disabled:opacity-60"
                 >
-                  {deletingId === confirmDelete ? "Deleting…" : "Delete"}
+                  {isDeleting ? "Deleting…" : "Delete"}
                 </button>
               </div>
             </motion.div>

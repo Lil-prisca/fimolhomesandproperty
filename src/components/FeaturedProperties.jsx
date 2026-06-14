@@ -12,6 +12,8 @@ export default function FeaturedProperties() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
+  const featuredProperties = properties.filter((p) => p.featured);
+
   return (
     <section id="properties" className="py-24 lg:py-15 relative" ref={ref}>
       <div className="absolute inset-0 grid-dots opacity-40 pointer-events-none" />
@@ -62,18 +64,16 @@ export default function FeaturedProperties() {
         </div>
 
         {/* Property grid */}
-        {properties.length > 0 ? (
+        {featuredProperties.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {properties.map((property, i) => (
+            {featuredProperties.map((property, i) => (
               <PropertyCard key={property.id} property={property} index={i} />
             ))}
           </div>
         ) : (
           // Empty state — shown when no properties in DB yet
           <div className="text-center py-20">
-            <p className="text-black/40 text-sm">
-              No featured listings yet. Add properties from the admin panel.
-            </p>
+            <p className="text-black/40 text-sm">No featured listings yet.</p>
           </div>
         )}
 
