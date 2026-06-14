@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/Fimollogo.png";
-import SidebarContent from "./SidebarContent";
+// import SidebarContent from "./SidebarContent";
 
 const navItems = [
   {
@@ -106,7 +106,7 @@ const navItems = [
   },
 ];
 
-export default function AdminSidebar({ userEmail }) {
+export function AdminSidebar({ userEmail }) {
   const location = useLocation();
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -210,7 +210,7 @@ export default function AdminSidebar({ userEmail }) {
     <>
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex flex-col fixed top-0 left-0 h-full w-64 bg-[#041629] border-r border-white/10 z-40">
-        <SidebarContent />
+        {/* <SidebarContent /> */}
       </aside>
 
       {/* Mobile top bar */}
@@ -247,7 +247,7 @@ export default function AdminSidebar({ userEmail }) {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="lg:hidden fixed inset-y-0 left-0 w-72 bg-[#041629] border-r border-white/10 z-40 pt-16"
           >
-            <SidebarContent />
+            {/* <SidebarContent /> */}
           </motion.div>
         )}
       </AnimatePresence>
@@ -261,3 +261,4 @@ export default function AdminSidebar({ userEmail }) {
     </>
   );
 }
+export default SidebarContent;
