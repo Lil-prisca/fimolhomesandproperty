@@ -135,7 +135,7 @@ function PropertyCard({ property, index }) {
 
         <div className="flex items-center justify-between">
           <div>
-            <div className="text-xs text-white/40 mb-0.5">Starting from</div>
+            <div className="text-xs text-white/40 mb-0.5">Price</div>
             <div className="font-display text-xl font-bold text-gradient">
               {property.price_label}
             </div>

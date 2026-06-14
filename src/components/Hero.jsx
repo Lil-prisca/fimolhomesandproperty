@@ -14,7 +14,7 @@ const whatsappMessage = encodeURIComponent(
 const stats = [
   { value: "2,400+", label: "Properties Listed" },
   { value: "98%", label: "Client Satisfaction" },
-  { value: "15+", label: "Years of Excellence" },
+  { value: "7+", label: "Years of Excellence" },
   { value: "₦850B+", label: "Assets Managed" },
 ];
 
