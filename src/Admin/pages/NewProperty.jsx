@@ -7,6 +7,7 @@ const PROPERTY_TYPES = [
   "Apartment",
   "Luxury Apartment",
   "Villa",
+  "Estate",
   "House",
   "Luxury Home",
   "Land",

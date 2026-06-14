@@ -4,9 +4,9 @@ import { supabase } from "../supabase";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const WHATSAPP_NUMBER = "2348144169686";
-const PHONE_NUMBER = "+2348144169686";
-const PHONE_NUMBER2 = "+2348119692684";
+const WHATSAPP_NUMBER = "2348119692684";
+const PHONE_NUMBER = "+2348119692684";
+const PHONE_NUMBER2 = "+2348142619300";
 const PHONE_NUMBER3 = "+2347045149357";
 
 const contactInfo = [

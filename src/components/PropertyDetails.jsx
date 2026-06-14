@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import PropertyCard from "../components/PropertyCard";
 import { supabase } from "../supabase";
 
-const WHATSAPP_NUMBER = "2348144169686";
-// const WHATSAPP_NUMBER = "2348119692684";
+// const WHATSAPP_NUMBER = "2348144169686";
+const WHATSAPP_NUMBER = "2348119692684";
 
-const PHONE_NUMBER = "+2348144169686";
-// const PHONE_NUMBER = "+2348119692684";
+// const PHONE_NUMBER = "+2348144169686";
+const PHONE_NUMBER = "+2348119692684";
 
 export default function PropertyDetail({ property, related }) {
   const [activeImage, setActiveImage] = useState(0);
@@ -347,7 +347,7 @@ export default function PropertyDetail({ property, related }) {
                       ? [
                           {
                             label: "Land Size",
-                            value: `${property.sqft} sqft Land`,
+                            value: `${property.sqft} `,
                           },
                         ]
                       : []),

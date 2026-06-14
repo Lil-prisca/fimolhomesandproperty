@@ -7,8 +7,7 @@ import gettingland from "../assets/Mangettingland.jpeg";
 import ceo from "../assets/Ceopics.jpeg";
 import mediaguy from "../assets/Mediaguy.jpeg";
 
-const WHATSAPP_NUMBER = "2348144169686";
-// const PHONE_NUMBER = "+2348144169686";
+const WHATSAPP_NUMBER = "2348119692684";
 
 const whatsappMessage = encodeURIComponent(
   `Hi, I'm interested in Investing in a  Property. Please provide more details.`,
