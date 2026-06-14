@@ -3,7 +3,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import vid from "../assets/Herovid.webm";
 
 const WHATSAPP_NUMBER = "2348144169686";
 // const WHATSAPP_NUMBER = "2348119692684";
@@ -35,18 +34,15 @@ export default function Hero() {
     >
       {/* Background parallax image */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
-        <video
-          src={vid}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
+        <img
+          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=90"
+          alt="Luxury property hero"
           className="w-full h-full object-cover object-center"
+          // sizes="100vw"
         />
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#020B18]/60 via-[#020B18]/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020B18]/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020B18] via-[#020B18]/70 to-[#020B18]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#020B18]/80 via-transparent to-transparent" />
       </motion.div>
       {/* Floating orbs */}
       <div
@@ -70,10 +66,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex items-center gap-3 mb-6"
           >
-            <div className="h-px w-10 bg-[#020B18]" />
-            <span className="text-[#020B18]   text-2xl ">
-              Premium Real Estate
-            </span>
+            <div className="h-px w-3 bg-white" />
+            <span className="text-white   text-2xl ">Premium Real Estate</span>
           </motion.div>
 
           {/* Headline */}

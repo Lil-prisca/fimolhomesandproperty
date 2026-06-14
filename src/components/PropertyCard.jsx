@@ -137,7 +137,7 @@ function PropertyCard({ property, index }) {
           <div>
             <div className="text-xs text-white/40 mb-0.5">Starting from</div>
             <div className="font-display text-xl font-bold text-gradient">
-              {property.price}
+              {property.price_label}
             </div>
           </div>
           <Link to={`/properties/${property.slug}`}>

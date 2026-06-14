@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
 import { Link } from "react-router-dom";
-
 import PropertyCard from "../components/PropertyCard";
+import { supabase } from "../supabase";
 
 const WHATSAPP_NUMBER = "2348144169686";
 // const WHATSAPP_NUMBER = "2348119692684";
@@ -29,22 +28,28 @@ export default function PropertyDetail({ property, related }) {
         .map((img) => img.url)
     : ["https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=85"];
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     setSubmitting(true);
-    // .insert({
-    //   property_id: property.id,
-    //   property_title: property.title,
-    //   name: formData.name,
-    //   email: formData.email,
-    //   phone: formData.phone,
-    //   message: formData.message,
-    // });
 
-    setTimeout(() => {
+    const { error } = await supabase.from("enquiries").insert({
+      property_id: property.id,
+      property_title: property.title,
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      status: "new",
+    });
+
+    if (error) {
+      console.error("Enquiry error:", error.message);
       setSubmitting(false);
-      setSubmitted(true);
-    }, 1000);
+      return;
+    }
+
+    setSubmitting(false);
+    setSubmitted(true);
   }
 
   const whatsappMessage = encodeURIComponent(
@@ -260,7 +265,7 @@ export default function PropertyDetail({ property, related }) {
                   {property.title}
                 </h1>
                 <div className="font-display text-3xl font-bold text-[#020b18] ">
-                  {property.price}
+                  {property.price_label}
                 </div>
               </motion.div>
 
@@ -295,12 +300,14 @@ export default function PropertyDetail({ property, related }) {
                     <div className="text-xs text-white/45">Square Feet</div>
                   </div>
                 )}
-                <div className="glassdetails rounded-2xl p-4 text-center">
-                  <div className="text-2xl font-display font-bold text-white mb-1">
-                    C of O
+                {property.documents !== null && (
+                  <div className="glassdetails rounded-2xl p-4 text-center">
+                    <div className="text-2xl font-display font-bold text-white mb-1">
+                      {property.documents}
+                    </div>
+                    <div className="text-xs text-white/45">Title</div>
                   </div>
-                  <div className="text-xs text-white/45">Title</div>
-                </div>
+                )}
               </motion.div>
 
               {/* Description */}
@@ -337,23 +344,25 @@ export default function PropertyDetail({ property, related }) {
                     { label: "State", value: property.state },
                     { label: "City", value: property.city },
                     ...(property.sqft
-                      ? [{ label: "Area", value: `${property.sqft} sqft` }]
+                      ? [{ label: "Area", value: `${property.sqft} sqft Land` }]
                       : []),
-                    { label: "Status", value: "For Sale" },
+                    { label: "Status", value: property.badge },
                     ...(property.beds !== null
                       ? [
                           { label: "Bedrooms", value: String(property.beds) },
                           { label: "Bathrooms", value: String(property.baths) },
                         ]
                       : []),
-                    { label: "Title Document", value: "C of O" },
+                    ...(property.documents !== null
+                      ? [{ label: "Title Document", value: property.documents }]
+                      : []),
                   ].map((item) => (
                     <div
                       key={item.label}
                       className="flex items-center justify-between py-3 border-b border-white/8"
                     >
                       <span className="text-white text-sm">{item.label}</span>
-                      <span className="text-white text-sm font-medium">
+                      <span className="max-w-55 text-white text-sm text-end font-medium">
                         {item.value}
                       </span>
                     </div>

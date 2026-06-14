@@ -85,7 +85,7 @@ export default function EditPropertyForm({ property }) {
     featured: property.featured,
     badge: property.badge ?? "",
     badge_color: property.badge_color ?? "",
-    lat: property.lat !== null ? String(property.lat) : "",
+    documents: property.documents ?? "",
     lng: property.lng !== null ? String(property.lng) : "",
   });
 
@@ -152,8 +152,7 @@ export default function EditPropertyForm({ property }) {
           featured: form.featured,
           badge: form.badge || null,
           badge_color: form.badge_color || null,
-          lat: form.lat ? parseFloat(form.lat) : null,
-          lng: form.lng ? parseFloat(form.lng) : null,
+          documents: form.documents || null,
         })
         .eq("id", property.id);
 
@@ -234,7 +233,7 @@ export default function EditPropertyForm({ property }) {
           <h1 className="font-display text-3xl font-bold text-white">
             Edit Property
           </h1>
-          <p className="text-white/45 text-sm mt-0.5 truncate max-w-md">
+          <p className="text-white/45 text-sm mt-0.5 tline-clamp-2 max-w-md">
             {property.title}
           </p>
         </div>
@@ -390,28 +389,6 @@ export default function EditPropertyForm({ property }) {
                 className={inputClass}
               />
             </div>
-            <div>
-              <label className={labelClass}>Latitude (for map)</label>
-              <input
-                type="number"
-                step="any"
-                value={form.lat}
-                onChange={(e) => set("lat", e.target.value)}
-                placeholder="optional"
-                className={inputClass}
-              />
-            </div>
-            <div>
-              <label className={labelClass}>Longitude (for map)</label>
-              <input
-                type="number"
-                step="any"
-                value={form.lng}
-                onChange={(e) => set("lng", e.target.value)}
-                placeholder="optional"
-                className={inputClass}
-              />
-            </div>
           </div>
         </div>
 
@@ -421,6 +398,15 @@ export default function EditPropertyForm({ property }) {
             Property Details
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label className={labelClass}>Document</label>
+              <input
+                type="text"
+                value={form.documents}
+                onChange={(e) => set("documents", e.target.value)}
+                className={inputClass}
+              />
+            </div>
             <div>
               <label className={labelClass}>Bedrooms</label>
               <input

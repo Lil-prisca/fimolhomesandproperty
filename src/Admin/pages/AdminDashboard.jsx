@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useFetchProperties from "../../hooks/useFetchProperties";
+import useFetchEnquiries from "../../hooks/useFetchEnquiries";
 
 export default function AdminDashboard() {
   const { properties } = useFetchProperties();
@@ -9,10 +10,12 @@ export default function AdminDashboard() {
 
   // these will come from DB later
   const activeProperties = totalProperties;
-  const newEnquiries = 0;
+
+  const { enquiries } = useFetchEnquiries();
+  const newEnquiries = enquiries.filter((e) => e.status === "new").length;
 
   const recentProperties = properties.slice(0, 5);
-  const recentEnquiries = [];
+  const recentEnquiries = enquiries.slice(0, 5);
 
   const statCards = [
     {
@@ -84,7 +87,7 @@ export default function AdminDashboard() {
   ];
 
   return (
-    <div>
+    <div className="w-full">
       {/* Header */}
       <div className="mb-8">
         <h1 className="font-display text-3xl font-bold text-white mb-1">
@@ -132,8 +135,8 @@ export default function AdminDashboard() {
                   key={p.id}
                   className="flex items-center justify-between py-3 border-b border-white/8 last:border-0"
                 >
-                  <div className="min-w-0">
-                    <div className="text-white text-sm font-medium truncate">
+                  <div className="min-w-0 flex-1 overflow-hidden">
+                    <div className="text-white text-sm font-medium line-clamp-2 ">
                       {p.title}
                     </div>
                     <div className="text-white/40 text-xs mt-0.5">

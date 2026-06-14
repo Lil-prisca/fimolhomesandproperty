@@ -51,8 +51,8 @@ const team = [
 const stats = [
   { value: "2,400+", label: "Properties Listed" },
   { value: "98%", label: "Client Satisfaction" },
-  { value: "15+", label: "Years of Excellence" },
-  { value: "₦850B+", label: "Assets Managed" },
+  // { value: "15+", label: "Years of Excellence" },
+  // { value: "₦850B+", label: "Assets Managed" },
 ];
 
 const values = [
@@ -163,7 +163,7 @@ export default function AboutPage() {
         </section>
 
         {/* Stats */}
-        <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+        <section className=" max-w-7xl mx-auto px-6 lg:px-10 py-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {stats.map((stat, i) => (
               <motion.div
@@ -186,7 +186,7 @@ export default function AboutPage() {
         </section>
 
         {/* Our Story */}
-        <section className="max-w-7xl text-black mx-auto px-6 lg:px-10 py-16">
+        <section className="max-w-7xl text-black mx-auto px-6 lg:px-10 pt-5pb-10">
           <div className="grid  lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
