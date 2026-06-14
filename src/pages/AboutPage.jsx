@@ -223,31 +223,6 @@ export default function AboutPage() {
                 </p>
               </div>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="relative"
-            >
-              <div className="relative h-[500px] rounded-2xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=85"
-                  alt="Our story"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020B18]/60 to-transparent" />
-              </div>
-              {/* <div className="absolute -bottom-6 -left-6 glass rounded-2xl p-5 border border-white/10">
-                <div className="font-display text-2xl font-bold text-white">
-                  2009
-                </div>
-                <div className="text-white/50 text-xs mt-0.5">
-                  Founded in Lagos
-                </div>
-              </div> */}
-            </motion.div>
           </div>
         </section>
 
