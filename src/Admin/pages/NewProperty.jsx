@@ -93,8 +93,7 @@ export default function NewPropertyPage() {
     featured: false,
     badge: "",
     badge_color: "",
-    lat: "",
-    lng: "",
+    documents: "",
   });
 
   // ✅ fixed — accepts key and value as parameters
@@ -177,8 +176,7 @@ export default function NewPropertyPage() {
           featured: form.featured,
           badge: form.badge || null,
           badge_color: form.badge_color || null,
-          lat: form.lat ? parseFloat(form.lat) : null,
-          lng: form.lng ? parseFloat(form.lng) : null,
+          documents: form.documents || null,
         })
         .select("id")
         .single();
@@ -404,28 +402,6 @@ export default function NewPropertyPage() {
                 className={inputClass}
               />
             </div>
-            <div>
-              <label className={labelClass}>Latitude (optional)</label>
-              <input
-                type="number"
-                step="any"
-                value={form.lat}
-                onChange={(e) => set("lat", e.target.value)}
-                placeholder="e.g. 6.4281"
-                className={inputClass}
-              />
-            </div>
-            <div>
-              <label className={labelClass}>Longitude (optional)</label>
-              <input
-                type="number"
-                step="any"
-                value={form.lng}
-                onChange={(e) => set("lng", e.target.value)}
-                placeholder="e.g. 3.4219"
-                className={inputClass}
-              />
-            </div>
           </div>
         </div>
 
@@ -435,6 +411,17 @@ export default function NewPropertyPage() {
             Property Details
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label className={labelClass}>Documents</label>
+              <input
+                type="text"
+                min="0"
+                value={form.documents}
+                onChange={(e) => set("documents", e.target.value)}
+                placeholder="e.g. C of O"
+                className={inputClass}
+              />
+            </div>
             <div>
               <label className={labelClass}>
                 Bedrooms (leave blank for land)

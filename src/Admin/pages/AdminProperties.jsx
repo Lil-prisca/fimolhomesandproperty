@@ -21,11 +21,11 @@ export default function AdminPropertiesPage() {
           </p>
         </div>
         <div className="flex gap-3">
-          <Link to="/admin/import" className="btn-outline py-2.5 px-5 text-sm">
+          {/* <Link to="/admin/import" className="btn-outline py-2.5 px-5 text-sm">
             Import CSV
-          </Link>
+          </Link> */}
           <Link
-            to="/admin/properties/newproperty"
+            to="/admin/newproperty"
             className="btn-primary py-2.5 px-5 text-sm"
           >
             + Add Property
