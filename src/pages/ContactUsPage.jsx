@@ -23,8 +23,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Email",
-    value: "info@fimolhome.ng",
-    href: "mailto:info@fimolhome.ng",
+    value: "fimolhomeandpProperties@gmail.com",
+    href: "mailto:fimolhomeandpProperties@gmail.com",
   },
   {
     icon: (
@@ -62,7 +62,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Office",
-    value: "Lagos, Nigeria",
+    value: "2,Oba Ogundipe Byepass Liberty Road Ibadan",
     href: null,
   },
 ];
