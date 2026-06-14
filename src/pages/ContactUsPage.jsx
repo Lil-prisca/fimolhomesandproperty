@@ -108,8 +108,7 @@ const ContactUsPage = () => {
 
   return (
     <div className="bg-white min-h-screen text-black">
-      <Navbar />
-
+      <Navbar home />
       {/* Hero */}
       <section className="  relative min-h-[50vh] flex items-end overflow-hidden">
         <div className="absolute inset-0 z-0">

@@ -10,7 +10,7 @@ const PROPERTY_TYPES = [
   // { label: "Apartments", value: "Apartment" },
   // { label: "Villas", value: "Villa" },
   { label: "Land", value: "Land" },
-  // { label: "Luxury Homes", value: "Luxury Home" },
+  { label: "Estate", value: "Estate" },
   { label: "Houses", value: "House" },
   { label: "Commercial", value: "Commercial" },
   // { label: "Luxury Apartments", value: "Luxury Apartment" },
