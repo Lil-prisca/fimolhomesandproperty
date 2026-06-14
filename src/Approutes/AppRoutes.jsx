@@ -12,6 +12,7 @@ import EditPropertyPage from "../Admin/pages/EditProperty.jsx";
 import EnquiriesPage from "../Admin/pages/Enquires.jsx";
 import AboutPage from "../pages/AboutPage.jsx";
 import AdminLoginPage from "../Admin/pages/AdminLoginPage.jsx";
+import ContactUsPage from "../pages/ContactUsPage.jsx";
 
 const Approutes = () => {
   return (
@@ -21,6 +22,8 @@ const Approutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/allproperties" element={<Allproperties />} />
         <Route path="/about-us" element={<AboutPage />} />
+        <Route path="/contact-us" element={<ContactUsPage />} />
+
         <Route path="/properties/:id" element={<PropertyDetailPage />} />
 
         <Route path="/admin/login" element={<AdminLoginPage />} />

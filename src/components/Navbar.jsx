@@ -8,7 +8,7 @@ const navLinks = [
   { label: "About Us", to: "/about-us" },
   { label: "Our Products", to: "/allproperties" },
   // { label: "Testimonials", to: "/testimonials" },
-  // { label: "Contact", to: "/contact" },
+  { label: "Contact Us", to: "/contact-us" },
 ];
 
 export default function Navbar(props) {
