@@ -106,19 +106,14 @@ const navItems = [
   },
 ];
 
-export function AdminSidebar({ userEmail }) {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [loggingOut, setLoggingOut] = useState(false);
-
-  async function handleLogout() {
-    setLoggingOut(true);
-    // TODO: add supabase signOut here when connecting to database
-    navigate("/admin/login");
-  }
-
-  const SidebarContent = () => (
+function SidebarContent({
+  location,
+  setMobileOpen,
+  userEmail,
+  loggingOut,
+  handleLogout,
+}) {
+  return (
     <div className="flex flex-col h-full">
       {/* Logo */}
       <div className="p-6 border-b border-white/10">
@@ -205,12 +200,31 @@ export function AdminSidebar({ userEmail }) {
       </div>
     </div>
   );
+}
+
+export default function AdminSidebar({ userEmail }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [loggingOut, setLoggingOut] = useState(false);
+
+  async function handleLogout() {
+    setLoggingOut(true);
+    // TODO: add supabase signOut here when connecting to database
+    navigate("/admin/login");
+  }
 
   return (
     <>
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex flex-col fixed top-0 left-0 h-full w-64 bg-[#041629] border-r border-white/10 z-40">
-        {/* <SidebarContent /> */}
+        <SidebarContent
+          location={location}
+          setMobileOpen={setMobileOpen}
+          userEmail={userEmail}
+          loggingOut={loggingOut}
+          handleLogout={handleLogout}
+        />
       </aside>
 
       {/* Mobile top bar */}
@@ -247,7 +261,13 @@ export function AdminSidebar({ userEmail }) {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="lg:hidden fixed inset-y-0 left-0 w-72 bg-[#041629] border-r border-white/10 z-40 pt-16"
           >
-            {/* <SidebarContent /> */}
+            <SidebarContent
+              location={location}
+              setMobileOpen={setMobileOpen}
+              userEmail={userEmail}
+              loggingOut={loggingOut}
+              handleLogout={handleLogout}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -261,4 +281,3 @@ export function AdminSidebar({ userEmail }) {
     </>
   );
 }
-export default SidebarContent;
