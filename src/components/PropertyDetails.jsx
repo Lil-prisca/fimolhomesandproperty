@@ -344,7 +344,12 @@ export default function PropertyDetail({ property, related }) {
                     { label: "State", value: property.state },
                     { label: "City", value: property.city },
                     ...(property.sqft
-                      ? [{ label: "Area", value: `${property.sqft} sqft Land` }]
+                      ? [
+                          {
+                            label: "Land Size",
+                            value: `${property.sqft} sqft Land`,
+                          },
+                        ]
                       : []),
                     { label: "Status", value: property.badge },
                     ...(property.beds !== null
