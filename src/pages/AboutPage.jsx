@@ -22,7 +22,7 @@ const team = [
     tiktok: "https://www.tiktok.com/@oluwafunmilayo.ti6?_r=1&_t=ZS-977uvaUqncS",
     instagram: "https://www.instagram.com/funmilayoimoleayo",
     bio: " She Joined real estate in 2019 as a realtor, bringing sharp analytical acumen and a passion for property acquisition. Has worked with several leading real estate firms across Nigeria, rising through the ranks with consistent excellence.",
-    bios: "Sales Executive at Kingdom Realties (2019–2020), Head of Sales at Jehus Farm, Head of Operations at Toposysi Realtors (2023), Branch Manager at Riel Homes (2024), and Director at Maya Real Homes (2025). A GIS expert with over 6 years of invaluable experience, renowned for adept leadership and problem-solving across diverse environmental development domains.",
+    bios: "Sales Executive at Kingdom Realties (2019–2020), Head of Sales at Jehus Farm, Head of Operations at Toposysi Realtors (2023), Branch Manager at Riel Homes (2024), and Director at Maya Real Homes (2025). She is an expert with over 6 years of invaluable experience, renowned for adept leadership and problem-solving across diverse environmental development domains.",
   },
   {
     name: "Adedayo James",
