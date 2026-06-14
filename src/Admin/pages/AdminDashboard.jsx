@@ -233,13 +233,8 @@ export default function AdminDashboard() {
         {[
           {
             label: "Add New Property",
-            to: "/admin/properties/newproperty",
+            to: "/admin/newproperty",
             desc: "Create a listing manually",
-          },
-          {
-            label: "Import from CSV",
-            to: "/admin/import",
-            desc: "Bulk upload properties",
           },
           {
             label: "View Live Site",

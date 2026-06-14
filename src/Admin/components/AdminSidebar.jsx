@@ -65,27 +65,6 @@ const navItems = [
     ),
   },
   {
-    label: "Import CSV",
-    href: "/admin/import",
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 20 20" fill="none">
-        <path
-          d="M10 3v10M6 9l4 4 4-4"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M3 15h14"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-  },
-  {
     label: "Enquiries",
     href: "/admin/enquiries",
     icon: (
