@@ -198,7 +198,7 @@ export default function AboutPage() {
                 <span className="section-label">Our Story</span>
               </div>
               <h2 className="font-display text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
-                A Decade of Connecting
+                Connecting
                 <span className="block text-gradient">Nigerians to Home</span>
               </h2>
               <div className="space-y-4 text-black  leading-relaxed">
@@ -325,6 +325,9 @@ export default function AboutPage() {
                   it easier, safer, and more rewarding to find, buy, sell, and
                   invest in real estate through technology, local expertise, and
                   an unwavering commitment to our clients.
+                </p>
+                <p className="text-white/55 leading-relaxed">
+                Our mission is also empowering dreams, one home at a time. At  Fimol Homes and Properties, wwe deliver exceptional real estate services with integrity, transparency and unwaivering commitement to our client's interest.
                 </p>
               </motion.div>
 
