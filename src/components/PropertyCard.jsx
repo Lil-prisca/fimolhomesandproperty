@@ -132,7 +132,7 @@ function PropertyCard({ property, index }) {
                   strokeWidth="1.2"
                 />
               </svg>
-              {property.sqft} {property.beds === null ? "sqft land" : "sqft"}
+              {property.sqft} land
             </span>
           )}
         </div>
