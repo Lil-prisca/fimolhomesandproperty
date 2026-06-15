@@ -7,6 +7,7 @@ import gettingland from "../assets/Mangettingland.jpeg";
 import ceo from "../assets/Ceopics.jpeg";
 import mediaguy from "../assets/Mediaguy.jpeg";
 import salesrep from "../assets/HeadOfSales.jpeg";
+import marketer from "../assets/Marketer.jpeg";
 
 const WHATSAPP_NUMBER = "2348119692684";
 
@@ -38,13 +39,12 @@ const team = [
     image: salesrep,
     bio: "",
   },
-  // {
-  //   name: "Fatima Al-Hassan",
-  //   role: "Client Relations Manager",
-  //   image:
-  //     "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
-  //   bio: "Dedicated to ensuring every client receives a seamless, personalised property search experience.",
-  // },
+  {
+    name: "Oladiti Wuraola",
+    role: "Marketing and Operations Associate",
+    image: marketer,
+    bio: "",
+  },
 ];
 
 const stats = [
