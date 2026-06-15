@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import gettingland from "../assets/Mangettingland.jpeg";
 import ceo from "../assets/Ceopics.jpeg";
 import mediaguy from "../assets/Mediaguy.jpeg";
+import salesrep from "../assets/HeadOfSales.jpeg";
 
 const WHATSAPP_NUMBER = "2348119692684";
 
@@ -16,7 +17,7 @@ const whatsappMessage = encodeURIComponent(
 const team = [
   {
     name: "Oluwafunmilayo Imoleayo",
-    role: "Founder & CEO",
+    role: "Founder & MD",
     image: ceo,
     tiktok: "https://www.tiktok.com/@oluwafunmilayo.ti6?_r=1&_t=ZS-977uvaUqncS",
     instagram: "https://www.instagram.com/funmilayoimoleayo",
@@ -31,13 +32,12 @@ const team = [
     tiktok:
       "https://www.tiktok.com/@officialthex3rovert?_r=1&_t=ZS-97AzDjhSTmH",
   },
-  // {
-  //   name: "Emeka Nwosu",
-  //   role: "Lead Property Consultant",
-  //   image:
-  //     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
-  //   bio: "Specialises in commercial real estate and land acquisition across Nigeria's key investment corridors.",
-  // },
+  {
+    name: "Olanrewaju Temitope",
+    role: "Head of sales",
+    image: salesrep,
+    bio: "",
+  },
   // {
   //   name: "Fatima Al-Hassan",
   //   role: "Client Relations Manager",
