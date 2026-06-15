@@ -7,7 +7,7 @@ import gettingland from "../assets/Mangettingland.jpeg";
 import ceo from "../assets/Ceopics.jpeg";
 import mediaguy from "../assets/Mediaguy.jpeg";
 import salesrep from "../assets/HeadOfSales.jpeg";
-import marketer from "../assets/Marketer.jpeg";
+import marketer from "../assets/Market.jpeg";
 
 const WHATSAPP_NUMBER = "2348119692684";
 
