@@ -26,14 +26,14 @@ const categories = [
     desc: "Prime plots in residential and commercial zones",
     link: "/allproperties?type=Land",
   },
-  // {
-  //   label: "Luxury Homes",
-  //   count: "95+ listings",
-  //   image:
-  //     "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
-  //   desc: "Bespoke residences that redefine sophisticated living",
-  //   link: "/allproperties?type=Luxury+Home",
-  // },
+  {
+    label: "Estate",
+    count: "95+ listings",
+    image:
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
+    desc: "Bespoke residences that redefine sophisticated living",
+    link: "/allproperties?type=Estate",
+  },
   {
     label: "Commercial",
     count: "210+ listings",

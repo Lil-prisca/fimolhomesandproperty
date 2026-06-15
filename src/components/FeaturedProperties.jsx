@@ -46,7 +46,7 @@ export default function FeaturedProperties() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <Link
-              href="/allproperties"
+              to="/allproperties"
               className="btn-outline text-black self-start lg:self-auto py-3 px-6 text-sm"
             >
               View All Properties
@@ -85,7 +85,7 @@ export default function FeaturedProperties() {
           className="flex justify-center mt-12"
         >
           <Link
-            href="/allproperties"
+            to="/allproperties"
             className="btn-outline text-black py-3 px-10"
           >
             Browse All Properties

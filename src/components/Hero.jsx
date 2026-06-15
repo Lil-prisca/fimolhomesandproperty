@@ -12,8 +12,8 @@ const whatsappMessage = encodeURIComponent(
 const stats = [
   { value: "2,400+", label: "Properties Listed" },
   { value: "98%", label: "Client Satisfaction" },
-  { value: "7+", label: "Years of Excellence" },
-  { value: "₦850B+", label: "Assets Managed" },
+  { value: "6+", label: "Years of Excellence" },
+  { value: "₦700M+", label: "Assets Managed" },
 ];
 
 export default function Hero() {
@@ -65,7 +65,9 @@ export default function Hero() {
             className="flex items-center gap-3 mb-6"
           >
             <div className="h-px w-3 bg-white" />
-            <span className="text-white   text-2xl ">Premium Real Estate</span>
+            <span className="text-white   text-2xl ">
+              Premium and Affordable Real Estate
+            </span>
           </motion.div>
 
           {/* Headline */}

@@ -24,32 +24,36 @@ function PropertyCard({ property, index }) {
     >
       {/* Image */}
       <div className="relative h-56 overflow-hidden">
-        <img
-          src={primaryImage}
-          alt={property.title}
-          className=" w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#020B18]/80 via-transparent to-transparent" />
-
-        {/* Badge */}
-        {property.badge && (
-          <span
-            className={`absolute top-4 left-4 ${property.badgeColor || "bg-blue-500"} text-white text-xs font-semibold px-3 py-1 rounded-full tracking-wide`}
-          >
-            {property.badge}
-          </span>
-        )}
-
-        <span className="absolute top-4 right-4 glass text-white/80 text-xs px-3 py-1 rounded-full">
-          {property.type}
-        </span>
-
-        {/* Hover overlay */}
         <Link to={`/properties/${property.slug || property.id}`}>
-          <motion.div className="absolute inset-0 flex items-center justify-center bg-blue-900/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="btn-primary text-sm py-3 px-6">View Details</span>
-          </motion.div>
+          <img
+            src={primaryImage}
+            alt={property.title}
+            className=" w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#020B18]/80 via-transparent to-transparent" />
+
+          {/* Badge */}
+          {property.badge && (
+            <span
+              className={`absolute top-4 left-4 ${property.badgeColor || "bg-blue-500"} text-white text-sm font-semibold px-3 py-2 rounded-full tracking-wide`}
+            >
+              {property.badge}
+            </span>
+          )}
+
+          <span className="absolute top-4 right-4 glass text-white/80 text-xs px-3 py-1 rounded-full">
+            {property.type}
+          </span>
+
+          {/* Hover overlay */}
+          <Link to={`/properties/${property.slug || property.id}`}>
+            <motion.div className="absolute inset-0 flex items-center justify-center bg-blue-900/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="btn-primary text-sm py-3 px-6">
+                View Details
+              </span>
+            </motion.div>
+          </Link>
         </Link>
       </div>
 
