@@ -7,9 +7,9 @@ const testimonials = [
     role: "Property Investor, Lagos",
     avatar:
       "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80",
-    text: "Fimol Home & Properties found me a prime land in Lekki Phase 2 that I had been searching for over a year. Their team's market knowledge and attention to detail is unmatched. I've since completed three more transactions through them.",
+    text: "Fimol Home & Properties found me a prime land  that I had been searching for over a year. Their team's market knowledge and attention to detail is unmatched. I've since completed three more transactions through them.",
     rating: 5,
-    property: "Land, Lekki Phase 2",
+    property: "Land",
   },
   {
     name: "Emeka Nwachukwu",
@@ -18,7 +18,7 @@ const testimonials = [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
     text: "Buying a commercial property is complex, but the Fimol Home & Properties team made it seamless. From due diligence to title documentation, everything was handled with absolute professionalism. I couldn't be more satisfied.",
     rating: 5,
-    property: "Commercial Plaza, Victoria Island",
+    property: "Commercial Plaza",
   },
   {
     name: "Adaeze Mensah",
@@ -27,16 +27,16 @@ const testimonials = [
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
     text: "As an architect, I have very particular taste in properties. Fimol Home & Properties understood my brief completely and presented options I genuinely loved. My Banana Island residence exceeded every expectation.",
     rating: 5,
-    property: "Luxury Villa, Banana Island",
+    property: "House, ",
   },
   {
     name: "Biodun Adeleke",
     role: "Finance Director, First National",
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
-    text: "Their investment intelligence reports are exceptional. I was able to evaluate the ROI on three properties before making a decision. Within 18 months, my Asokoro home had appreciated by 34%. Phenomenal team.",
+    text: "Their investment intelligence reports are exceptional. I was able to evaluate the ROI on three properties before making a decision. Within 18 months, my  home had appreciated by 34%. Phenomenal team.",
     rating: 5,
-    property: "Executive Home, Asokoro",
+    property: "House",
   },
 ];
 
