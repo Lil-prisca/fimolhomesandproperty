@@ -370,7 +370,7 @@ export default function AboutPage() {
                         color: "text-yellow-400",
                       },
                       {
-                        value: "36",
+                        value: "20",
                         label: "States Covered",
                         color: "text-blue-400",
                       },
@@ -466,7 +466,7 @@ export default function AboutPage() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:max-w-2xl lg:m-auto gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3   lg:m-auto gap-6">
               {team.map((member, i) => (
                 <motion.div
                   key={member.name}

@@ -82,9 +82,9 @@ export default function Hero() {
               }}
               className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold leading-[1.05] text-white"
             >
-              Find Your
-              <span className="block text-gradient">Dream Property</span>
-              in Nigeria
+              Own Property
+              <span className="block text-gradient">With Documents </span>
+              You Can Sleep On
             </motion.h1>
           </div>
 
