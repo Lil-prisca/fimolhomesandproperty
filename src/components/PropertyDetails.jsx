@@ -261,12 +261,36 @@ export default function PropertyDetail({ property, related }) {
                     {property.location}
                   </span>
                 </div>
+
                 <h1 className="font-display text-3xl lg:text-5xl font-bold text-black mb-4 leading-tight">
                   {property.title}
                 </h1>
-                <div className="font-display text-3xl font-bold text-[#020b18] ">
-                  {property.price_label}
-                </div>
+                {property.type === "Estate" ? (
+                  <div className="flex flex-col md:flex-row  gap-2">
+                    <div className=" bg-[#020b18] flex flex-col items-center justify-between  rounded-xl px-4 py-3">
+                      <p className="text-white text-sm">500SQM</p>
+                      <span className="font-display text-xl font-bold text-white">
+                        {property.price_label}
+                      </span>
+                    </div>
+                    <div className=" bg-[#020b18] flex flex-col  items-center justify-between  rounded-xl px-4 py-3">
+                      <p className="text-white text-sm"> 1500SQM</p>
+                      <span className="font-display text-xl font-bold text-white">
+                        {property.price2_label}
+                      </span>
+                    </div>
+                    <div className=" bg-[#020b18] flex flex-col  items-center justify-between  rounded-xl px-4 py-3">
+                      <p className="text-white text-sm">3000SQM</p>
+                      <span className="font-display text-xl font-bold text-white">
+                        {property.price3_label}
+                      </span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="font-display text-3xl font-bold text-[#020b18] ">
+                    {property.price_label}
+                  </div>
+                )}
               </motion.div>
 
               {/* Stats */}
@@ -305,7 +329,7 @@ export default function PropertyDetail({ property, related }) {
                     <div className="text-2xl font-display font-bold text-white mb-1">
                       {property.documents}
                     </div>
-                    <div className="text-xs text-white/45">Title</div>
+                    <div className="text-xs text-white/45">Title/Document</div>
                   </div>
                 )}
               </motion.div>

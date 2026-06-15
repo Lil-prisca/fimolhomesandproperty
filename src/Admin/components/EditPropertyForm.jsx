@@ -54,6 +54,12 @@ const NIGERIA_STATES = [
   "Zamfara",
 ];
 
+function formatPrice(raw) {
+  const num = raw.replace(/\D/g, "");
+  if (!num) return "";
+  return "₦" + Number(num).toLocaleString("en-NG");
+}
+
 export default function EditPropertyForm({ property }) {
   const navigate = useNavigate();
   const [saving, setSaving] = useState(false);
@@ -73,7 +79,9 @@ export default function EditPropertyForm({ property }) {
     slug: property.slug,
     description: property.description ?? "",
     priceRaw: String(property.price),
-    price_label: property.price_label,
+    price2Raw: String(property.price2),
+    price3Raw: String(property.price3),
+    // price_label: property.price_label,
     state: property.state,
     city: property.city,
     address: property.address ?? "",
@@ -87,7 +95,6 @@ export default function EditPropertyForm({ property }) {
     badge: property.badge ?? "",
     badge_color: property.badge_color ?? "",
     documents: property.documents ?? "",
-    lng: property.lng !== null ? String(property.lng) : "",
   });
 
   function set(key, value) {
@@ -130,8 +137,12 @@ export default function EditPropertyForm({ property }) {
     try {
       const priceNum =
         parseInt(form.priceRaw.replace(/\D/g, ""), 10) || property.price;
-      const priceLabel =
-        form.price_label || `₦${priceNum.toLocaleString("en-NG")}`;
+      const price2Num = form.price2Raw
+        ? parseInt(form.price2Raw.replace(/\D/g, ""), 10)
+        : null;
+      const price3Num = form.price3Raw
+        ? parseInt(form.price3Raw.replace(/\D/g, ""), 10)
+        : null;
 
       const { error: updateError } = await supabase
         .from("properties")
@@ -140,7 +151,11 @@ export default function EditPropertyForm({ property }) {
           slug: form.slug,
           description: form.description || null,
           price: priceNum,
-          price_label: priceLabel,
+          price_label: formatPrice(form.priceRaw),
+          price2: price2Num,
+          price2_label: formatPrice(form.price2Raw),
+          price3: price3Num,
+          price3_label: formatPrice(form.price3Raw),
           state: form.state,
           city: form.city,
           address: form.address || null,
@@ -313,41 +328,116 @@ export default function EditPropertyForm({ property }) {
           <h2 className="font-display text-lg font-semibold text-white mb-5">
             Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className={labelClass}>Price (raw number, ₦)</label>
-              <input
-                type="text"
-                value={form.priceRaw}
-                onChange={(e) => set("priceRaw", e.target.value)}
-                className={inputClass}
-              />
+
+          {form.type === "Estate" ? (
+            // Three price inputs for Estate
+            <div className="space-y-4">
+              <p className="text-white/40 text-xs mb-2">
+                Enter pricing tiers for this estate (e.g. plot sizes or phases)
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className={labelClass}>Price Tier 1 (₦) *</label>
+                  <input
+                    required
+                    type="text"
+                    value={form.priceRaw}
+                    onChange={(e) => set("priceRaw", e.target.value)}
+                    placeholder="e.g. 5000000"
+                    className={inputClass}
+                  />
+                  {form.priceRaw && (
+                    <p className="text-blue-400 text-xs mt-1.5">
+                      {formatPrice(form.priceRaw)}
+                    </p>
+                  )}
+                </div>
+
+                <div>
+                  <label className={labelClass}>Price Tier 2 (₦)</label>
+                  <input
+                    type="text"
+                    value={form.price2Raw}
+                    onChange={(e) => set("price2Raw", e.target.value)}
+                    placeholder="e.g. 8000000"
+                    className={inputClass}
+                  />
+                  {form.price2Raw && (
+                    <p className="text-blue-400 text-xs mt-1.5">
+                      {formatPrice(form.price2Raw)}
+                    </p>
+                  )}
+                </div>
+
+                <div>
+                  <label className={labelClass}>Price Tier 3 (₦)</label>
+                  <input
+                    type="text"
+                    value={form.price3Raw}
+                    onChange={(e) => set("price3Raw", e.target.value)}
+                    placeholder="e.g. 15000000"
+                    className={inputClass}
+                  />
+                  {form.price3Raw && (
+                    <p className="text-blue-400 text-xs mt-1.5">
+                      {formatPrice(form.price3Raw)}
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 pt-2">
+                <input
+                  type="checkbox"
+                  id="featured"
+                  checked={form.featured}
+                  onChange={(e) => set("featured", e.target.checked)}
+                  className="w-4 h-4 rounded accent-blue-500 cursor-pointer"
+                />
+                <label
+                  htmlFor="featured"
+                  className="text-white/70 text-sm cursor-pointer"
+                >
+                  Mark as Featured
+                </label>
+              </div>
             </div>
-            <div>
-              <label className={labelClass}>Price Label (display)</label>
-              <input
-                type="text"
-                value={form.price_label}
-                onChange={(e) => set("price_label", e.target.value)}
-                className={inputClass}
-              />
+          ) : (
+            // Normal single price
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className={labelClass}>Price (₦) *</label>
+                <input
+                  required
+                  type="text"
+                  value={form.priceRaw}
+                  onChange={(e) => set("priceRaw", e.target.value)}
+                  placeholder="e.g. 85000000"
+                  className={inputClass}
+                />
+                {form.priceRaw && (
+                  <p className="text-blue-400 text-xs mt-1.5">
+                    {formatPrice(form.priceRaw)}
+                  </p>
+                )}
+              </div>
+              <div className="flex items-center gap-3 pt-7">
+                <input
+                  type="checkbox"
+                  id="featured"
+                  checked={form.featured}
+                  onChange={(e) => set("featured", e.target.checked)}
+                  className="w-4 h-4 rounded accent-blue-500 cursor-pointer"
+                />
+                <label
+                  htmlFor="featured"
+                  className="text-white/70 text-sm cursor-pointer"
+                >
+                  Mark as Featured
+                </label>
+              </div>
             </div>
-            <div className="flex items-center gap-3">
-              <input
-                type="checkbox"
-                id="featured"
-                checked={form.featured}
-                onChange={(e) => set("featured", e.target.checked)}
-                className="w-4 h-4 rounded accent-blue-500 cursor-pointer"
-              />
-              <label
-                htmlFor="featured"
-                className="text-white/70 text-sm cursor-pointer"
-              >
-                Mark as Featured
-              </label>
-            </div>
-          </div>
+          )}
         </div>
 
         {/* Location */}
