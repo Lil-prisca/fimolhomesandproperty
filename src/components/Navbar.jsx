@@ -65,24 +65,25 @@ export default function Navbar(props) {
 
           {/* CTA + hamburger */}
           <div className="flex items-center gap-4">
-            <motion.Link
-              to="/allproperties"
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, duration: 0.4 }}
-              className="btn-primaryone "
+              className=""
             >
-              Browse Listings
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </motion.Link>
+              <Link to="/allproperties" className=" btn-primaryone">
+                Browse Listings
+                <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+            </motion.div>
 
             {/* Hamburger */}
             <button
