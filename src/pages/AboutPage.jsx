@@ -198,14 +198,15 @@ export default function AboutPage() {
                 <span className="section-label">Our Story</span>
               </div>
               <h2 className="font-display text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
-                Connecting
-                <span className="block text-gradient">Nigerians to Home</span>
+                Years of Connecting
+                <span className="block text-gradient">Nigerians to Homes</span>
               </h2>
               <div className="space-y-4 text-black  leading-relaxed">
                 <p>
-                  Fimol Home & Properties was founded with a simple but powerful
-                  belief — that every Nigerian deserves access to quality real
-                  estate, presented with transparency and professionalism.
+                  Fimol Homes & Properties was founded with a simple but
+                  powerful belief — that every Nigerian deserves access to
+                  quality real estate, presented with transparency and
+                  professionalism.
                 </p>
                 <p>
                   What began as a small consultancy is growimg into one of
@@ -327,7 +328,10 @@ export default function AboutPage() {
                   an unwavering commitment to our clients.
                 </p>
                 <p className="text-white/55 leading-relaxed">
-                Our mission is also empowering dreams, one home at a time. At  Fimol Homes and Properties, wwe deliver exceptional real estate services with integrity, transparency and unwaivering commitement to our client's interest.
+                  Our mission is also empowering dreams, one home at a time. At
+                  Fimol Homes and Properties, wwe deliver exceptional real
+                  estate services with integrity, transparency and unwaivering
+                  commitement to our client's interest.
                 </p>
               </motion.div>
 
