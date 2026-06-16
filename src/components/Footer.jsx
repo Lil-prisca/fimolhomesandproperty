@@ -207,7 +207,7 @@ text-sm"
                     strokeLinecap="round"
                   />
                 </svg>
-                <span>fimolhomeandpProperties@gmail.com</span>
+                <span>fimolhomesandproperties@gmail.com</span>
               </div>
             </div>
 
