@@ -177,7 +177,7 @@ const LandAcquisition = () => {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <div className="glass rounded-2xl overflow-hidden border border-white/10 aspect-9/16 max-h-200">
+              <div className="glass rounded-2xl overflow-hidden border border-white/10 aspect-6.5/16 max-h-200">
                 <iframe
                   src="https://www.tiktok.com/embed/v2/7636363098927942920"
                   width="100%"
@@ -200,15 +200,15 @@ const LandAcquisition = () => {
             transition={{ duration: 0.7 }}
             className=" mt-15 lg:mt-10"
           >
-            <div className=" mx-auto h-fit glass rounded-2xl overflow-hidden border border-white/10 aspect-6/16 max-h-200">
+            <div className=" mx-auto  glass rounded-2xl overflow-hidden border border-white/10 aspect-6.5/16 max-h-200">
               <iframe
-                src="nohttps://www.tiktok.com/@fimolhomesltd1?refer=embed"
+                src="https://www.tiktok.com/embed/v2/7582916832546376981"
                 width="100%"
                 height="100%"
                 frameBorder="0"
                 allowFullScreen
                 scrolling="no"
-                className="w-fit h-fit"
+                className="w-full h-full"
               />
             </div>
 
