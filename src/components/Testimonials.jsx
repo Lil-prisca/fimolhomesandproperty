@@ -7,7 +7,7 @@ const testimonials = [
     role: "Property Investor, Lagos",
     avatar:
       "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80",
-    text: "Fimol Home & Properties found me a prime land  that I had been searching for over a year. Their team's market knowledge and attention to detail is unmatched. I've since completed three more transactions through them.",
+    text: "Fimol Homes & Properties found me a prime land  that I had been searching for over a year. Their team's market knowledge and attention to detail is unmatched. I've since completed three more transactions through them.",
     rating: 5,
     property: "Land",
   },
@@ -16,7 +16,7 @@ const testimonials = [
     role: "CEO, TechVenture Group",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
-    text: "Buying a commercial property is complex, but the Fimol Home & Properties team made it seamless. From due diligence to title documentation, everything was handled with absolute professionalism. I couldn't be more satisfied.",
+    text: "Buying a commercial property is complex, but the Fimol Homes & Properties team made it seamless. From due diligence to title documentation, everything was handled with absolute professionalism. I couldn't be more satisfied.",
     rating: 5,
     property: "Commercial Plaza",
   },
@@ -25,7 +25,7 @@ const testimonials = [
     role: "Architect & Homeowner",
     avatar:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
-    text: "As an architect, I have very particular taste in properties. Fimol Home & Properties understood my brief completely and presented options I genuinely loved. My Banana Island residence exceeded every expectation.",
+    text: "As an architect, I have very particular taste in properties. Fimol Homes & Properties understood my brief completely and presented options I genuinely loved. My residence exceeded every expectation.",
     rating: 5,
     property: "House, ",
   },
