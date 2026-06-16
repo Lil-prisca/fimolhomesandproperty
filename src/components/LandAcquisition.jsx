@@ -136,7 +136,7 @@ const LandAcquisition = () => {
       <div className="bg-white relative py-8">
         <div className="absolute inset-0 grid-dots opacity-20 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="flex flex-col lg:flex-row lg:justify-around gap-20 items-center">
+          <div className="flex flex-col lg:flex-row lg:justify-around gap-10 items-center">
             {/* Text */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -193,6 +193,29 @@ const LandAcquisition = () => {
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-blue-400/10 rounded-full blur-lg" />
             </motion.div>
           </div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className=" mt-15 lg:mt-10"
+          >
+            <div className=" mx-auto h-fit glass rounded-2xl overflow-hidden border border-white/10 aspect-6/16 max-h-200">
+              <iframe
+                src="nohttps://www.tiktok.com/@fimolhomesltd1?refer=embed"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                scrolling="no"
+                className="w-fit h-fit"
+              />
+            </div>
+
+            {/* Decorative */}
+            {/* <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-500/10 rounded-full blur-xl" />
+            <div className="absolute -top-4 -left-4 w-16 h-16 bg-blue-400/10 rounded-full blur-lg" /> */}
+          </motion.div>
         </div>
       </div>
     </section>
