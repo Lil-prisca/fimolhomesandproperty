@@ -7,6 +7,7 @@ import Ad4 from "../assets/Ads4.jpeg";
 import Ad5 from "../assets/Ads5.jpeg";
 import Ad6 from "../assets/Ads6.jpeg";
 import Ad7 from "../assets/Ads7.jpeg";
+import Ad8 from "../assets/Ads8.jpeg";
 
 const ads = [
   {
@@ -37,9 +38,14 @@ const ads = [
     link: "/allproperties?type=Luxury+Apartment",
   },
   {
-    id: 1,
+    id: 4,
     image: Ad7,
     subtext: "Selling-Fast",
+  },
+  {
+    id: 5,
+    image: Ad8,
+    subtext: "Coming Soon",
   },
 ];
 
