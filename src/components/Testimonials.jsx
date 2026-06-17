@@ -9,7 +9,7 @@ const testimonials = [
       "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80",
     text: "Fimol homes and properties is a very professional and highly organized company whose goals and objectives resonate with me. Their ability to deliver value in the Real Estate space is quite commendable. I have been privileged to be a part of the company and have grown with the company in leaps and bounds . The property I enlisted for in their Estate in Ido is high was 1million per plot last year is now worth N3.5million per plot seeing my investment post a very healthy return in less than a year. I am super delighted about the growth opportunity the company presents. I am a big ambassador of the brand and intend to invest more into their upcoming and current estates.",
     rating: 5,
-    property: "Land",
+    property: "Estate",
   },
   {
     name: "Chinyere Okafor",
