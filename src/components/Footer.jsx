@@ -120,7 +120,7 @@ text-sm"
               </div>
               <span className="font-display text-xl font-bold text-white">
                 Fimol <span className="text-gradient">Homes {""}</span>
-                And Properties
+                And <span className="text-gradient">Properties</span>
               </span>
             </Link>
             <p className="text-white/45 text-sm leading-relaxed mb-6 max-w-xs">
